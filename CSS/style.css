@@ -1,0 +1,130 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Toàn trang */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to top, #d0eaff, #ffffff);
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 10px;
+  background: #fff8;
+  backdrop-filter: blur(5px);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #666;
+}
+
+nav a.active {
+  color: #d26ba0;
+}
+
+/* ===== MAIN ===== */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Nút chung */
+.btn, #controls button {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #d26ba0;
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover, #controls button:hover {
+  background-color: #a84b7a;
+  transform: scale(1.05);
+}
+
+/* ===== SEASON EFFECT ===== */
+#season-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Controls */
+#controls {
+  text-align: center;
+  padding: 12px;
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+}
+
+/* Hoa */
+.flower {
+  position: absolute;
+  animation: fall linear infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes fall {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* ===== Lời chúc (chữ ký) ===== */
+#couplet {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+#couplet .line { font-size: 18px; color: #333; }
+#couplet .tease { color: #d26ba0; font-style: italic; font-size: 14px; }
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+  background: #fff8;
+}

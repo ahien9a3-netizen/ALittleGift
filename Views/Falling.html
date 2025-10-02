@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hiệu ứng 4 mùa | ALittleGift</title>
+  <meta name="description" content="Trải nghiệm hiệu ứng rơi 4 mùa: xuân, hạ, thu, đông cùng ALittleGift.">
+  <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌸 Hoa 4 Mùa</h1>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Trang chủ</a></li>
+        <li><a href="Falling.html" class="active">Hiệu ứng</a></li>
+        <li><a href="About.html">Giới thiệu</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="season-container"></div>
+
+    <div id="controls">
+      <button data-season="spring">🌸 Xuân</button>
+      <button data-season="summer">🌼 Hạ</button>
+      <button data-season="autumn">🍂 Thu</button>
+      <button data-season="winter">❄️ Đông</button>
+    </div>
+  </main>
+
+  <div id="couplet">
+    <p class="line">A Little Gift For Mya</p>
+    <p class="line tease">BY Hasono</p>
+  </div>
+
+  <footer>
+    <p>© 2025 ALittleGift</p>
+  </footer>
+
+  <!-- MVC JS -->
+  <script src="../Models/effectsModel.js"></script>
+  <script src="../Controllers/effectsController.js"></script>
+  <script src="../JS/main.js"></script>
+</body>
+</html>
